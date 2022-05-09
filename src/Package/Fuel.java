@@ -1,15 +1,20 @@
 package Package;
+
+import java.sql.SQLOutput;
+
 // create class
 class Fuel {
-    int distanceToFire;
-    int returnDistance;
-    int workEngine;
+    private int distanceToFire;
+    private int returnDistance;
+    private int workEngine;
+
 // use constructor
     Fuel(int distanceToFire, int returnDistance, int workEngine) {
         this.distanceToFire = distanceToFire;
         this.returnDistance = returnDistance;
         this.workEngine = workEngine;
     }
+
     // перевизначення конструктора
     Fuel() {
         distanceToFire = 0;
@@ -25,16 +30,16 @@ class Fuel {
     }
 
     // void
-    void fuelCons(){
+    void fuelCons(){// розраховує витрату палива
         double allFuel = ((distanceToFire + returnDistance) * 0.35) + workEngine * 0.25;
         System.out.println("Витрата палива становить" + " " + allFuel + "л");
     }
 // return
     int cisternDistance(){
         return distanceToFire + returnDistance;
-    }
+    }// весь шлях
     //parameter
-    void refueling(int fuel, int distance){
+    void refueling(int fuel, int distance){//в залежності від кількості палива визначає чи можна добратись до пожежі
         if(fuel > distance * 0.35){
             System.out.println("Ви зможете добратись до пожежі");
         }
@@ -52,5 +57,40 @@ class Fuel {
         }
     }
 
+    // diff class method
+    WaterTime waterTime = new WaterTime(400,2,7);
+    Building length = new Building(4,100,50);
+    int len = length.getLength();
+    int numHose = waterTime.getCountN();
+    void numHoses(){// визначає кількість пожежних рукавів
+        System.out.println("Потрібно використати" + " " + (len * numHose)/20 + " " + "рукавів"  );
+    }
+
+
+
+    // get() and set()
+    public int getDistanceToFire() {
+        return distanceToFire;
+    }
+
+    public void setDistanceToFire(int distanceToFire) {
+        this.distanceToFire = distanceToFire;
+    }
+
+    public int getReturnDistance() {
+        return returnDistance;
+    }
+
+    public void setReturnDistance(int returnDistance) {
+        this.returnDistance = returnDistance;
+    }
+
+    public int getWorkEngine() {
+        return workEngine;
+    }
+
+    public void setWorkEngine(int workEngine) {
+        this.workEngine = workEngine;
+    }
 }
 

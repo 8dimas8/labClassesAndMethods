@@ -1,29 +1,35 @@
 package Package;
+
 // create class
 class WaterTime {
-    int volumeTank;
-    int countN;
-    int waterSupply;
+    private int volumeTank;
+    private int countN;
+    private int waterSupply;
+
     // use constructor
     WaterTime(int volumeTank, int countN, int waterSupply) {
         this.volumeTank = volumeTank;
         this.countN = countN;
         this.waterSupply = waterSupply;
     }
+
     // void
-    void waterUse() {
+    void waterUse() {//визначає на який час води вистачить в цистерні
         System.out.println("Води в цистерні вистачить на" + " " + (volumeTank / (countN * waterSupply * 60) + "хв"));
     }
+
     // return
-    int waterRef() {
+    int waterRef() {//визначає за який час цистерна наповниться водою
         return volumeTank / (waterSupply * 60);}
+
     // parameter
-    int roadToWater(int way, int averageSpeed){
+    int roadToWater(int way, int averageSpeed){// час доїзду до вододжерела
         int time = (way/averageSpeed) * 60;
         return time;
     }
 
-    void varEquipment(int... arr){
+    // dyn
+    void varEquipment(int... arr){// визначає на скількох осіб вистачить спорядження
         int min = arr[0];
         for (int elem : arr){
             if (elem <= min){
@@ -46,4 +52,29 @@ class WaterTime {
    }
 
 
+
+    // get() and set()
+    public int getVolumeTank() {
+        return volumeTank;
+    }
+
+    public void setVolumeTank(int volumeTank) {
+        this.volumeTank = volumeTank;
+    }
+
+    public int getCountN() {
+        return countN;
+    }
+
+    public void setCountN(int countN) {
+        this.countN = countN;
+    }
+
+    public int getWaterSupply() {
+        return waterSupply;
+    }
+
+    public void setWaterSupply(int waterSupply) {
+        this.waterSupply = waterSupply;
+    }
 }

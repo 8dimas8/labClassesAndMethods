@@ -13,6 +13,8 @@ class Main {
         // 2 аргументи
         Fuel fuel3 = new Fuel(5,8);
         Building building = new Building(5,3,20);
+        int lenBuilding = building.getLength();
+        int num = water.getCountN();
 
         // WaterTime
         water.waterUse();
@@ -42,6 +44,9 @@ class Main {
         // перевантаження
         water.cost(30,4);
         building.cost(400,40);
+        System.out.println("<---->");
 
+        // inc
+        fuel.numHoses();
     }
 }
