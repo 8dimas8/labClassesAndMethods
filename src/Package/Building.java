@@ -44,11 +44,6 @@ class Building {
     }
 
 
-    // diff class method
-    void maxPowerFuel(){// витрата палива в режимі навантаження
-
-    }
-
     // get() and set()
     public int getNumFloors() {
         return numFloors;
