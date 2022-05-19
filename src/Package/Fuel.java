@@ -1,6 +1,5 @@
 package Package;
 
-import java.sql.SQLOutput;
 
 // create class
 class Fuel {
