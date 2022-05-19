@@ -26,10 +26,10 @@ class Main {
 
         // Fuel;
         fuel.fuelCons();
-        System.out.println("Пройдений шлях складає" + fuel.cisternDistance() + "км");
+        System.out.println("Пройдений шлях складає" + fuel.cisternDistance() + " " + "км");
         fuel.refueling(60,60);
         // перевизначений
-        fuel.refueling(30,100);
+        fuel.refueling(30.9,150.6);
         System.out.println("<---->");
 
         // Building
@@ -46,7 +46,8 @@ class Main {
         building.cost(400,40);
         System.out.println("<---->");
 
-        // inc
-        fuel.numHoses();
+        // наслідування
+        Cistern cistern = new Cistern(4000,5,4,40000);
+        cistern.test();
     }
 }

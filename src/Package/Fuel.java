@@ -57,14 +57,7 @@ class Fuel {
         }
     }
 
-    // diff class method
-    WaterTime waterTime = new WaterTime(400,2,7);
-    Building length = new Building(4,100,50);
-    int len = length.getLength();
-    int numHose = waterTime.getCountN();
-    void numHoses(){// визначає кількість пожежних рукавів
-        System.out.println("Потрібно використати" + " " + (len * numHose)/20 + " " + "рукавів"  );
-    }
+
 
 
 

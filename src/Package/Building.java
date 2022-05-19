@@ -43,11 +43,6 @@ class Building {
         System.out.println("Витрата піни на гасіння пожежі" + " " + (a * 2.25)/b + " " + "куб.м/хв" );
     }
 
-    WaterTime waterTime = new WaterTime(4000,2,7);
-    Fuel fuel = new Fuel(4,5,4);
-    int volumeTank = waterTime.getVolumeTank();
-    int countN = waterTime.getCountN();
-    int waterSupply = waterTime.getWaterSupply();
 
     // diff class method
     void maxPowerFuel(){// витрата палива в режимі навантаження
